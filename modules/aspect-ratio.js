@@ -1,8 +1,8 @@
-export function fixRoundingErrors(float) {
+function fixRoundingErrors(float) {
   return parseFloat(float.toFixed(2));
 }
 
-export function calculateAspectRatio(
+function calculateAspectRatio(
   originalWidth,
   originalHeight,
   newValue,
@@ -17,3 +17,5 @@ export function calculateAspectRatio(
       : originalHeight / originalWidth;
   return fixRoundingErrors(formula * newValue);
 }
+
+export { fixRoundingErrors, calculateAspectRatio };
